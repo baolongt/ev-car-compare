@@ -21,9 +21,19 @@
     "vnd": "VND",
     "seats": "chỗ"
   },
+  "vehicle": {
+    "car": "Ô tô điện",
+    "motorbike": "Xe máy điện",
+    "cars": "Ô tô điện",
+    "motorbikes": "Xe máy điện",
+    "allCars": "Tất cả ô tô điện",
+    "allMotorbikes": "Tất cả xe máy điện"
+  },
   "nav": {
     "home": "Trang chủ",
-    "cars": "Xe điện",
+    "vehicles": "Xe điện",
+    "cars": "Ô tô điện",
+    "motorbikes": "Xe máy điện",
     "compare": "So sánh",
     "calculator": "Tính giá"
   },
@@ -82,6 +92,19 @@
       "seats": "Số chỗ ngồi"
     }
   },
+  "motorbike": {
+    "listingSubtitle": "Khám phá {count} mẫu xe máy điện tại Việt Nam",
+    "specs": {
+      "battery": "Dung lượng pin",
+      "range": "Tầm xa",
+      "power": "Công suất",
+      "topSpeed": "Tốc độ tối đa",
+      "chargeTime": "Thời gian sạc",
+      "weight": "Trọng lượng",
+      "maxLoad": "Tải trọng tối đa",
+      "warranty": "Bảo hành"
+    }
+  },
   "comparison": {
     "title": "So Sánh Xe Điện",
     "subtitle": "Chọn từ 2 đến {max} xe để so sánh thông số kỹ thuật chi tiết.",
@@ -137,7 +160,8 @@
     "copyright": "© {year} EV So Sánh. Tất cả thông tin chỉ mang tính tham khảo."
   },
   "home": {
-    "featuredCars": "Xe điện nổi bật",
+    "featuredCars": "Ô tô điện nổi bật",
+    "featuredMotorbikes": "Xe máy điện nổi bật",
     "featuredCarsSubtitle": "Những mẫu xe điện được quan tâm nhất tại Việt Nam",
     "brandsTitle": "Các thương hiệu xe điện tại Việt Nam"
   },
@@ -149,6 +173,10 @@
       "users": "Người dùng"
     }
   },
+  "pages": {
+    "showing": "Đang hiển thị",
+    "carsSubtitle": "Khám phá {count} mẫu ô tô điện từ các thương hiệu hàng đầu"
+  },
   "stats": {
     "models": "Mẫu xe điện",
     "brands": "Thương hiệu",
@@ -159,6 +187,10 @@
     "defaultTitle": "EV So Sánh - So sánh xe điện tại Việt Nam",
     "homeTitle": "So sánh Xe Điện tại Việt Nam | EV So Sánh",
     "homeDescription": "Tìm chiếc xe điện phù hợp với bạn. So sánh thông số kỹ thuật, giá cả và tính năng của các mẫu xe điện phổ biến nhất tại thị trường Việt Nam.",
+    "carsTitle": "Ô Tô Điện tại Việt Nam | EV So Sánh",
+    "carsDescription": "So sánh các mẫu ô tô điện tại Việt Nam. VinFast, BYD, Tesla, Hyundai với thông số kỹ thuật chi tiết.",
+    "motorbikesTitle": "Xe Máy Điện tại Việt Nam | EV So Sánh",
+    "motorbikesDescription": "So sánh các mẫu xe máy điện phổ biến tại Việt Nam. VinFast, YADEA, PEGA, Dat Bike.",
     "titleSuffix": "| EV So Sánh",
     "description": "So sánh xe điện tại Việt Nam. Tìm chiếc xe điện phù hợp với bạn với thông tin chi tiết về giá cả, thông số kỹ thuật và tính năng."
   },

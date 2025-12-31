@@ -1,0 +1,140 @@
+[
+  {
+    "id": "vinfast-klara-s",
+    "slug": "vinfast-klara-s",
+    "type": "motorbike",
+    "brand": "vinfast",
+    "model": "Klara S",
+    "year": 2024,
+    "price": 39900000,
+    "specs": {
+      "battery": 3.35,
+      "range": 120,
+      "power": 2.5,
+      "topSpeed": 50,
+      "chargeTime": "6 giờ",
+      "weight": 115,
+      "maxLoad": 160,
+      "warranty": "3 năm pin"
+    },
+    "images": ["/images/placeholder-motorbike.svg"],
+    "features": ["Màn hình LCD", "Khóa thông minh", "Phanh đĩa trước sau", "Đèn LED"],
+    "description": "Xe máy điện VinFast phổ biến nhất với thiết kế thanh lịch và pin khỏe.",
+    "featured": true
+  },
+  {
+    "id": "vinfast-evo-200",
+    "slug": "vinfast-evo-200",
+    "type": "motorbike",
+    "brand": "vinfast",
+    "model": "Evo 200",
+    "year": 2024,
+    "price": 22900000,
+    "specs": {
+      "battery": 1.68,
+      "range": 85,
+      "power": 1.5,
+      "topSpeed": 49,
+      "chargeTime": "5 giờ",
+      "weight": 90,
+      "maxLoad": 150,
+      "warranty": "2 năm pin"
+    },
+    "images": ["/images/placeholder-motorbike.svg"],
+    "features": ["Phanh đĩa", "Đèn LED", "Cốp rộng"],
+    "description": "Xe điện giá rẻ phù hợp học sinh sinh viên, di chuyển nội thành.",
+    "featured": true
+  },
+  {
+    "id": "yadea-g5",
+    "slug": "yadea-g5",
+    "type": "motorbike",
+    "brand": "yadea",
+    "model": "G5",
+    "year": 2024,
+    "price": 38990000,
+    "specs": {
+      "battery": 2.3,
+      "range": 90,
+      "power": 2.0,
+      "topSpeed": 55,
+      "chargeTime": "6 giờ",
+      "weight": 95,
+      "maxLoad": 150,
+      "warranty": "3 năm pin"
+    },
+    "images": ["/images/placeholder-motorbike.svg"],
+    "features": ["Chống trộm thông minh", "Đèn LED", "Phanh đĩa", "Màn hình điện tử"],
+    "description": "Xe máy điện cao cấp từ YADEA với công nghệ Graphene.",
+    "featured": true
+  },
+  {
+    "id": "pega-esmart",
+    "slug": "pega-esmart",
+    "type": "motorbike",
+    "brand": "pega",
+    "model": "eSmart",
+    "year": 2024,
+    "price": 16990000,
+    "specs": {
+      "battery": 1.2,
+      "range": 60,
+      "power": 1.0,
+      "topSpeed": 45,
+      "chargeTime": "4 giờ",
+      "weight": 70,
+      "maxLoad": 130,
+      "warranty": "2 năm pin"
+    },
+    "images": ["/images/placeholder-motorbike.svg"],
+    "features": ["Thiết kế nhỏ gọn", "Đèn LED", "Cốp xe"],
+    "description": "Xe điện mini giá rẻ, phù hợp di chuyển ngắn trong phố.",
+    "featured": false
+  },
+  {
+    "id": "dat-bike-weaver",
+    "slug": "dat-bike-weaver",
+    "type": "motorbike",
+    "brand": "datbike",
+    "model": "Weaver++",
+    "year": 2024,
+    "price": 65900000,
+    "specs": {
+      "battery": 5.9,
+      "range": 200,
+      "power": 6.5,
+      "topSpeed": 95,
+      "chargeTime": "3 giờ (sạc nhanh)",
+      "weight": 145,
+      "maxLoad": 180,
+      "warranty": "5 năm pin"
+    },
+    "images": ["/images/placeholder-motorbike.svg"],
+    "features": ["Động cơ 6.5kW", "Sạc nhanh 3 giờ", "Màn hình TFT", "Kết nối Bluetooth"],
+    "description": "Xe máy điện cao cấp Việt Nam với tầm xa vượt trội và hiệu năng mạnh.",
+    "featured": true
+  },
+  {
+    "id": "yadea-xmen",
+    "slug": "yadea-xmen",
+    "type": "motorbike",
+    "brand": "yadea",
+    "model": "X-Men",
+    "year": 2024,
+    "price": 21990000,
+    "specs": {
+      "battery": 1.8,
+      "range": 70,
+      "power": 1.5,
+      "topSpeed": 50,
+      "chargeTime": "5 giờ",
+      "weight": 85,
+      "maxLoad": 150,
+      "warranty": "2 năm pin"
+    },
+    "images": ["/images/placeholder-motorbike.svg"],
+    "features": ["Thiết kế thể thao", "Đèn LED", "Phanh đĩa"],
+    "description": "Xe điện năng động với thiết kế thể thao, phù hợp giới trẻ.",
+    "featured": false
+  }
+]

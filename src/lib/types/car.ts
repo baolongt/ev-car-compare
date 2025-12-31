@@ -22,6 +22,7 @@ export interface CarSpecs {
 }
 
 export interface Car {
+	type?: 'car'; // Optional for backward compatibility
 	id: string;
 	slug: string;
 	brand: string;

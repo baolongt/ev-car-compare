@@ -7,7 +7,8 @@
 		{
 			title: $t('footer.explore'),
 			links: [
-				{ href: `/${$locale}/xe-dien`, label: $t('footer.allCars') },
+				{ href: `/${$locale}/xe/oto`, label: $t('footer.allCars') },
+				{ href: `/${$locale}/xe/xe-may`, label: $t('vehicle.motorbikes') },
 				{ href: `/${$locale}/so-sanh`, label: $t('footer.compareCars') },
 				{ href: `/${$locale}/tinh-gia`, label: $t('footer.priceCalculator') }
 			]
@@ -15,10 +16,10 @@
 		{
 			title: $t('footer.brands'),
 			links: [
-				{ href: `/${$locale}/xe-dien?brand=vinfast`, label: 'VinFast' },
-				{ href: `/${$locale}/xe-dien?brand=byd`, label: 'BYD' },
-				{ href: `/${$locale}/xe-dien?brand=tesla`, label: 'Tesla' },
-				{ href: `/${$locale}/xe-dien?brand=hyundai`, label: 'Hyundai' }
+				{ href: `/${$locale}/xe/oto?brand=vinfast`, label: 'VinFast' },
+				{ href: `/${$locale}/xe/oto?brand=byd`, label: 'BYD' },
+				{ href: `/${$locale}/xe/oto?brand=tesla`, label: 'Tesla' },
+				{ href: `/${$locale}/xe/oto?brand=hyundai`, label: 'Hyundai' }
 			]
 		}
 	]);

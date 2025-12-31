@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { t, locale } from 'svelte-i18n';
-	import type { Brand } from '$types/car';
-	import brands from '$data/brands.json';
+	import type { Brand } from '$types/vehicle';
+	import carBrands from '$data/brands.json';
+	import motorbikeBrands from '$data/motorbike-brands.json';
 
-	const allBrands = brands as Brand[];
+	const allCarBrands = carBrands as Brand[];
+	const allMotorbikeBrands = motorbikeBrands as Brand[];
+	const allBrands = [...allCarBrands, ...allMotorbikeBrands];
 </script>
 
 <section class="py-12">

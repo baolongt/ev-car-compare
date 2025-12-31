@@ -76,8 +76,11 @@
 
 			<!-- Quick Links -->
 			<div class="mt-8 flex flex-wrap justify-center gap-4">
-				<a href="/{$locale}/xe-dien" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
-					{$t('hero.viewAllCars')}
+				<a href="/{$locale}/xe/oto" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
+					{$t('vehicle.cars')}
+				</a>
+				<a href="/{$locale}/xe/xe-may" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
+					{$t('vehicle.motorbikes')}
 				</a>
 				<a href="/{$locale}/so-sanh" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
 					{$t('hero.compareCars')}

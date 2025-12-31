@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <g fill="#9ca3af">
+    <circle cx="120" cy="200" r="40" stroke-width="8" stroke="#9ca3af" fill="none"/>
+    <circle cx="280" cy="200" r="40" stroke-width="8" stroke="#9ca3af" fill="none"/>
+    <path d="M120 200 L180 160 L200 100 L260 100 L280 200" stroke="#9ca3af" stroke-width="6" fill="none"/>
+    <rect x="190" y="80" width="50" height="30" rx="5" fill="#9ca3af"/>
+    <path d="M195 110 L220 150" stroke="#9ca3af" stroke-width="4"/>
+  </g>
+  <text x="200" y="260" text-anchor="middle" fill="#6b7280" font-size="16" font-family="system-ui">Electric Motorbike</text>
+</svg>

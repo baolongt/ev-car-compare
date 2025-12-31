@@ -21,9 +21,19 @@
     "vnd": "VND",
     "seats": "seats"
   },
+  "vehicle": {
+    "car": "Electric Car",
+    "motorbike": "Electric Motorbike",
+    "cars": "Electric Cars",
+    "motorbikes": "Electric Motorbikes",
+    "allCars": "All Electric Cars",
+    "allMotorbikes": "All Electric Motorbikes"
+  },
   "nav": {
     "home": "Home",
+    "vehicles": "Electric Vehicles",
     "cars": "Electric Cars",
+    "motorbikes": "Electric Motorbikes",
     "compare": "Compare",
     "calculator": "Price Calculator"
   },
@@ -82,6 +92,19 @@
       "seats": "Seats"
     }
   },
+  "motorbike": {
+    "listingSubtitle": "Explore {count} electric motorbikes from top brands",
+    "specs": {
+      "battery": "Battery Capacity",
+      "range": "Range",
+      "power": "Power",
+      "topSpeed": "Top Speed",
+      "chargeTime": "Charge Time",
+      "weight": "Weight",
+      "maxLoad": "Max Load",
+      "warranty": "Warranty"
+    }
+  },
   "comparison": {
     "title": "Compare Electric Cars",
     "subtitle": "Select 2 to {max} cars to compare detailed specifications.",
@@ -138,6 +161,7 @@
   },
   "home": {
     "featuredCars": "Featured Electric Cars",
+    "featuredMotorbikes": "Featured Electric Motorbikes",
     "featuredCarsSubtitle": "The most popular electric vehicles in Vietnam",
     "brandsTitle": "Electric Vehicle Brands in Vietnam"
   },
@@ -149,6 +173,10 @@
       "users": "Users"
     }
   },
+  "pages": {
+    "showing": "Showing",
+    "carsSubtitle": "Explore {count} electric cars from top brands"
+  },
   "stats": {
     "models": "Electric Cars",
     "brands": "Brands",
@@ -159,6 +187,10 @@
     "defaultTitle": "EV Compare - Compare Electric Cars in Vietnam",
     "homeTitle": "Compare Electric Vehicles in Vietnam | EV Compare",
     "homeDescription": "Find your perfect electric vehicle. Compare specs, prices, and features of the most popular EVs in Vietnam's market.",
+    "carsTitle": "Electric Cars in Vietnam | EV Compare",
+    "carsDescription": "Compare electric cars in Vietnam. VinFast, BYD, Tesla, Hyundai with detailed specifications.",
+    "motorbikesTitle": "Electric Motorbikes in Vietnam | EV Compare",
+    "motorbikesDescription": "Compare popular electric motorbikes in Vietnam. VinFast, YADEA, PEGA, Dat Bike.",
     "titleSuffix": "| EV Compare",
     "description": "Compare electric vehicles in Vietnam. Find your perfect EV with detailed information on prices, specifications, and features."
   },

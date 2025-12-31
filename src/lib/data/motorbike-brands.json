@@ -1,0 +1,30 @@
+[
+  {
+    "id": "vinfast",
+    "name": "VinFast",
+    "logo": "/images/brands/vinfast.png",
+    "country": "Việt Nam",
+    "website": "https://vinfastauto.com"
+  },
+  {
+    "id": "yadea",
+    "name": "YADEA",
+    "logo": "/images/brands/yadea.svg",
+    "country": "Trung Quốc",
+    "website": "https://yadea.com"
+  },
+  {
+    "id": "pega",
+    "name": "PEGA",
+    "logo": "/images/brands/pega.svg",
+    "country": "Việt Nam",
+    "website": "https://pega.vn"
+  },
+  {
+    "id": "datbike",
+    "name": "Dat Bike",
+    "logo": "/images/brands/datbike.svg",
+    "country": "Việt Nam",
+    "website": "https://datbike.com"
+  }
+]
