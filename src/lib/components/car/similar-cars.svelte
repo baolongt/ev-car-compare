@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { Car } from '$types/car';
 	import CarCard from './car-card.svelte';
 	import cars from '$data/cars.json';
@@ -34,7 +35,7 @@
 
 {#if similarCars.length > 0}
 	<section>
-		<h2 class="mb-6 text-2xl font-bold text-gray-900">Xe tương tự</h2>
+		<h2 class="mb-6 text-2xl font-bold text-gray-900">{$t('car.similar')}</h2>
 		<div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
 			{#each similarCars as car (car.id)}
 				<CarCard {car} />

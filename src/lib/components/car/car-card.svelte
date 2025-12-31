@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { Car } from '$types/car';
 	import { formatVNDCompact, formatRange, formatBattery } from '$utils/format';
 	import { comparisonIds, toggleComparison, MAX_COMPARE_CARS } from '$stores/comparison';
@@ -31,7 +32,7 @@
 			/>
 			{#if car.featured}
 				<span class="absolute left-2 top-2 rounded bg-accent-500 px-2 py-0.5 text-xs font-medium text-white">
-					Nổi bật
+					{$t('car.featured')}
 				</span>
 			{/if}
 			{#if showCompareButton}
@@ -41,8 +42,8 @@
 					class="absolute right-2 top-2 rounded-lg p-2 transition {isInComparison
 						? 'bg-primary-500 text-white'
 						: 'bg-white/90 text-gray-600 hover:bg-white hover:text-primary-600'} disabled:cursor-not-allowed disabled:opacity-50"
-					aria-label={isInComparison ? 'Xóa khỏi so sánh' : 'Thêm vào so sánh'}
-					title={isInComparison ? 'Xóa khỏi so sánh' : canAddMore ? 'Thêm vào so sánh' : 'Đã đạt giới hạn 3 xe'}
+					aria-label={isInComparison ? $t('car.removeFromCompare') : $t('car.addToCompare')}
+					title={isInComparison ? $t('car.removeFromCompare') : canAddMore ? $t('car.addToCompare') : $t('car.maxCompareReached')}
 				>
 					<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 						{#if isInComparison}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { Car } from '$types/car';
 	import cars from '$data/cars.json';
 	import brands from '$data/brands.json';
@@ -8,23 +9,23 @@
 
 	const stats = $derived([
 		{
-			label: 'Mẫu xe điện',
+			label: $t('stats.models'),
 			value: allCars.length.toString(),
 			icon: 'car'
 		},
 		{
-			label: 'Thương hiệu',
+			label: $t('stats.brands'),
 			value: brands.length.toString(),
 			icon: 'brand'
 		},
 		{
-			label: 'Giá từ',
+			label: $t('stats.priceFrom'),
 			value: formatVNDCompact(Math.min(...allCars.map((c) => c.price))),
 			icon: 'price'
 		},
 		{
-			label: 'Tầm xa tối đa',
-			value: `${Math.max(...allCars.map((c) => c.specs.range))} km`,
+			label: $t('stats.maxRange'),
+			value: `${Math.max(...allCars.map((c) => c.specs.range))} ${$t('units.km')}`,
 			icon: 'range'
 		}
 	]);

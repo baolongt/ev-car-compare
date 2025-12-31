@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import { comparisonCars, removeFromComparison, clearComparison } from '$stores/comparison';
 </script>
 
@@ -9,7 +10,7 @@
 				<!-- Selected cars -->
 				<div class="flex items-center gap-3 overflow-x-auto">
 					<span class="shrink-0 text-sm font-medium text-gray-600">
-						So sánh ({$comparisonCars.length}/3):
+						{$t('comparison.title')} ({$comparisonCars.length}/3):
 					</span>
 					{#each $comparisonCars as car (car.id)}
 						<div class="flex shrink-0 items-center gap-2 rounded-lg bg-gray-100 py-1 pl-1 pr-2">
@@ -22,7 +23,7 @@
 							<button
 								onclick={() => removeFromComparison(car.id)}
 								class="rounded-full p-0.5 text-gray-400 transition hover:bg-gray-200 hover:text-gray-600"
-								aria-label="Xóa {car.brand} {car.model}"
+								aria-label={$t('common.remove') + ' ' + car.brand + ' ' + car.model}
 							>
 								<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -38,13 +39,13 @@
 						onclick={clearComparison}
 						class="rounded-lg px-3 py-2 text-sm text-gray-600 transition hover:bg-gray-100"
 					>
-						Xóa tất cả
+						{$t('common.clearAll')}
 					</button>
 					<a
 						href="/so-sanh"
 						class="btn-primary text-sm"
 					>
-						So sánh ngay
+						{$t('comparison.title')}
 					</a>
 				</div>
 			</div>

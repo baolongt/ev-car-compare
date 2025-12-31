@@ -1,0 +1,201 @@
+{
+  "common": {
+    "brand": "Brand",
+    "price": "Price",
+    "range": "Range",
+    "battery": "Battery",
+    "compare": "Compare",
+    "calculate": "Calculate",
+    "viewDetails": "View Details",
+    "allCars": "All Electric Cars",
+    "search": "Search",
+    "searchPlaceholder": "Search by name, brand...",
+    "menu": "Menu",
+    "close": "Close",
+    "reset": "Reset",
+    "share": "Share",
+    "copied": "Copied!",
+    "clearAll": "Clear All",
+    "select": "Select",
+    "remove": "Remove",
+    "vnd": "VND",
+    "seats": "seats"
+  },
+  "nav": {
+    "home": "Home",
+    "cars": "Electric Cars",
+    "compare": "Compare",
+    "calculator": "Price Calculator"
+  },
+  "header": {
+    "siteName": "EV Compare",
+    "siteNameShort": "EV"
+  },
+  "hero": {
+    "title": "Compare {highlight}Electric Vehicles{/highlight} in Vietnam",
+    "titleHighlight": "Electric Vehicles",
+    "subtitle": "Find your perfect electric vehicle. Compare specs, prices, and features of the most popular EVs in Vietnam's market.",
+    "searchPlaceholder": "Search by name, brand...",
+    "searchButton": "Search",
+    "viewAllCars": "View all electric cars",
+    "compareCars": "Compare cars",
+    "priceCalculator": "Calculate price"
+  },
+  "filters": {
+    "title": "Filters",
+    "toggleFilters": "Filters",
+    "reset": "Reset",
+    "brand": "Brand",
+    "priceRange": "Price (VND)",
+    "rangeKm": "Range (km)",
+    "batteryKwh": "Battery Capacity (kWh)"
+  },
+  "car": {
+    "specs": "Specifications",
+    "features": "Features",
+    "similar": "Similar Cars",
+    "featured": "Featured",
+    "addToCompare": "Add to comparison",
+    "removeFromCompare": "Remove from comparison",
+    "maxCompareReached": "Maximum 3 cars reached",
+    "noFeatures": "No feature information available.",
+    "imageAlt": "Image {index} / {total}",
+    "prevImage": "Previous image",
+    "nextImage": "Next image",
+    "thumbnailAlt": "Image {index}",
+    "specs": {
+      "performance": "Performance",
+      "batteryCharging": "Battery & Charging",
+      "dimensions": "Dimensions",
+      "power": "Power",
+      "torque": "Torque",
+      "topSpeed": "Top Speed",
+      "acceleration": "0-100 km/h",
+      "driveType": "Drive Type",
+      "batteryCapacity": "Battery Capacity",
+      "range": "Range",
+      "chargingDC": "DC Fast Charging",
+      "chargingAC": "AC Charging",
+      "dimensionsLWH": "Dimensions (LxWxH)",
+      "wheelbase": "Wheelbase",
+      "weight": "Weight",
+      "seats": "Seats"
+    }
+  },
+  "comparison": {
+    "title": "Compare Electric Cars",
+    "subtitle": "Select 2 to {max} cars to compare detailed specifications.",
+    "selectCar": "Select Car",
+    "addCar": "Add Car",
+    "removeCar": "Remove Car",
+    "noSelection": "No cars selected",
+    "noSelectionSubtitle": "Use the search box above to add cars for comparison.",
+    "viewCarList": "View car list",
+    "highlightDifferences": "Highlight differences",
+    "share": "Share",
+    "copied": "Copied!",
+    "clearAll": "Clear all",
+    "addOneMore": "Add at least 1 more car to start comparing specifications.",
+    "searchPlaceholder": "Search cars..."
+  },
+  "calculator": {
+    "title": "Calculate Total Price",
+    "subtitle": "Calculate the actual cost of buying an electric car in Vietnam, including all fees and charges.",
+    "selectCar": "Select electric car",
+    "selectProvince": "Select province/city",
+    "selectedCar": "Selected car",
+    "clearSelection": "Clear selection",
+    "searchPlaceholder": "Search by name, brand...",
+    "popularCars": "Popular cars",
+    "priceBreakdown": "Price Breakdown",
+    "priceBreakdownEmpty": "Select a car to calculate price",
+    "priceBreakdownEmptySubtitle": "Results will be displayed here",
+    "basePrice": "Base Price",
+    "registrationFee": "Registration Fee",
+    "licensePlate": "License Plate Fee",
+    "roadMaintenanceFee": "Road Maintenance Fee",
+    "insurance": "Civil Liability Insurance",
+    "inspectionFee": "Inspection Fee",
+    "totalOnRoadPrice": "Total On-Road Price",
+    "totalOnRoadPriceNote": "Including vehicle price and all fees",
+    "basePriceSummary": "Vehicle Price",
+    "feesSummary": "Fees & Charges",
+    "evIncentives": {
+      "title": "EV Incentive Policy Notes",
+      "exemption100": "Electric vehicles are {strong}100% exempt from registration fee{/strong} until February 2027 under Decree 10/2022/ND-CP.",
+      "licensePlateFee": "License plate fee: Hanoi and HCMC 20 million, other provinces 1-4 million VND.",
+      "disclaimer": "Calculated prices are for reference only and may vary by dealer policy."
+    }
+  },
+  "footer": {
+    "about": "Vietnam's leading electric vehicle comparison platform. Helping you find the perfect EV.",
+    "explore": "Explore",
+    "allCars": "All electric cars",
+    "compareCars": "Compare cars",
+    "priceCalculator": "Price calculator",
+    "brands": "Brands",
+    "copyright": "© {year} EV Compare. All information is for reference only."
+  },
+  "home": {
+    "featuredCars": "Featured Electric Cars",
+    "featuredCarsSubtitle": "The most popular electric vehicles in Vietnam",
+    "brandsTitle": "Electric Vehicle Brands in Vietnam"
+  },
+  "homepage": {
+    "stats": {
+      "totalCars": "Electric Cars",
+      "brands": "Brands",
+      "comparisons": "Comparisons",
+      "users": "Users"
+    }
+  },
+  "stats": {
+    "models": "Electric Cars",
+    "brands": "Brands",
+    "priceFrom": "Starting from",
+    "maxRange": "Max Range"
+  },
+  "seo": {
+    "defaultTitle": "EV Compare - Compare Electric Cars in Vietnam",
+    "homeTitle": "Compare Electric Vehicles in Vietnam | EV Compare",
+    "homeDescription": "Find your perfect electric vehicle. Compare specs, prices, and features of the most popular EVs in Vietnam's market.",
+    "titleSuffix": "| EV Compare",
+    "description": "Compare electric vehicles in Vietnam. Find your perfect EV with detailed information on prices, specifications, and features."
+  },
+  "units": {
+    "km": "km",
+    "kwh": "kWh",
+    "hp": "HP",
+    "kw": "kW",
+    "nm": "Nm",
+    "kmh": "km/h",
+    "seconds": "s",
+    "mm": "mm",
+    "kg": "kg",
+    "minutes": "min",
+    "hours": "hrs"
+  },
+  "driveTypes": {
+    "fwd": "Front-Wheel Drive (FWD)",
+    "rwd": "Rear-Wheel Drive (RWD)",
+    "awd": "All-Wheel Drive (AWD)",
+    "4wd": "Four-Wheel Drive (4WD)"
+  },
+  "provinces": {
+    "hanoi": "Hanoi",
+    "hochiminh": "Ho Chi Minh City",
+    "danang": "Da Nang",
+    "haiphong": "Hai Phong",
+    "cantho": "Can Tho",
+    "binhduong": "Binh Duong",
+    "dongnai": "Dong Nai",
+    "vungtau": "Ba Ria - Vung Tau"
+  },
+  "errors": {
+    "pageNotFound": "Page Not Found",
+    "pageNotFoundDescription": "The page you're looking for doesn't exist or has been moved.",
+    "backHome": "Go to Homepage",
+    "serverError": "Something went wrong",
+    "serverErrorDescription": "Sorry, an error occurred. Please try again later."
+  }
+}

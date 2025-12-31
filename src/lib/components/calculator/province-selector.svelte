@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { Province } from '$utils/calculator';
 	import { getProvinces } from '$utils/calculator';
 
@@ -14,7 +15,7 @@
 
 <div>
 	<label for="province" class="block text-sm font-medium text-gray-700">
-		Tỉnh/Thành phố đăng ký
+		{$t('calculator.selectProvince')}
 	</label>
 	<select
 		id="province"
@@ -27,6 +28,6 @@
 		{/each}
 	</select>
 	<p class="mt-1 text-xs text-gray-500">
-		Phí trước bạ và biển số khác nhau theo từng tỉnh/thành
+		{$t('calculator.provinceNote', { default: 'Registration and license plate fees vary by province/city' })}
 	</p>
 </div>

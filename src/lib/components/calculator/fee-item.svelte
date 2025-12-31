@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { FeeItem } from '$utils/calculator';
 	import { formatVND } from '$utils/format';
 
@@ -19,7 +20,7 @@
 	<div class="text-right">
 		{#if item.isExempt && item.originalAmount}
 			<p class="text-sm text-gray-400 line-through">{formatVND(item.originalAmount)}</p>
-			<p class="font-semibold text-green-600">Miễn phí</p>
+			<p class="font-semibold text-green-600">{$t('calculator.exempt', { default: 'Exempt' })}</p>
 		{:else}
 			<p class="font-semibold text-gray-900">{formatVND(item.amount)}</p>
 		{/if}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { Brand } from '$types/car';
 	import Checkbox from '$components/ui/checkbox.svelte';
 	import brandsData from '$data/brands.json';
@@ -14,7 +15,7 @@
 </script>
 
 <div class="space-y-2">
-	<h3 class="text-sm font-medium text-gray-900">Hãng xe</h3>
+	<h3 class="text-sm font-medium text-gray-900">{$t('filters.brand')}</h3>
 	<div class="space-y-1">
 		{#each brands as brand}
 			<Checkbox

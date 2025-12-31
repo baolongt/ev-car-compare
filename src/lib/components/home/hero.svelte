@@ -1,12 +1,25 @@
 <script lang="ts">
+	import { t, locale } from 'svelte-i18n';
+
 	let searchQuery = $state('');
 
 	function handleSearch(e: SubmitEvent) {
 		e.preventDefault();
 		if (searchQuery.trim()) {
-			window.location.href = `/xe-dien?q=${encodeURIComponent(searchQuery.trim())}`;
+			window.location.href = `/${$locale}/xe-dien?q=${encodeURIComponent(searchQuery.trim())}`;
 		}
 	}
+
+	// Parse hero title with highlight tag
+	const heroTitle = $derived.by(() => {
+		const title = $t('hero.title');
+		const parts = title.split('{highlight}');
+		if (parts.length === 1) return { before: title, highlight: '', after: '' };
+
+		const [before, rest] = parts;
+		const [highlight, after] = rest.split('{/highlight}');
+		return { before, highlight, after };
+	});
 </script>
 
 <section class="relative overflow-hidden bg-gradient-to-br from-primary-600 to-primary-800 py-20 lg:py-32">
@@ -25,13 +38,10 @@
 	<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="text-center">
 			<h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-				So sánh <span class="text-accent-400">Xe Điện</span>
-				<br class="hidden sm:block" />
-				tại Việt Nam
+				{heroTitle.before}<span class="text-accent-400">{heroTitle.highlight}</span>{heroTitle.after}
 			</h1>
 			<p class="mx-auto mt-6 max-w-2xl text-lg text-primary-100">
-				Tìm chiếc xe điện phù hợp với bạn. So sánh thông số kỹ thuật, giá cả và tính năng của các
-				mẫu xe điện phổ biến nhất tại thị trường Việt Nam.
+				{$t('hero.subtitle')}
 			</p>
 
 			<!-- Search Box -->
@@ -54,26 +64,26 @@
 						<input
 							type="text"
 							bind:value={searchQuery}
-							placeholder="Tìm xe theo tên, hãng..."
+							placeholder={$t('hero.searchPlaceholder')}
 							class="w-full rounded-lg border-0 py-4 pl-12 pr-4 text-gray-900 shadow-lg placeholder:text-gray-400 focus:ring-2 focus:ring-accent-500"
 						/>
 					</div>
 					<button type="submit" class="rounded-lg bg-accent-500 px-6 py-4 font-semibold text-white shadow-lg transition hover:bg-accent-600">
-						Tìm kiếm
+						{$t('hero.searchButton')}
 					</button>
 				</div>
 			</form>
 
 			<!-- Quick Links -->
 			<div class="mt-8 flex flex-wrap justify-center gap-4">
-				<a href="/xe-dien" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
-					Xem tất cả xe điện
+				<a href="/{$locale}/xe-dien" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
+					{$t('hero.viewAllCars')}
 				</a>
-				<a href="/so-sanh" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
-					So sánh xe
+				<a href="/{$locale}/so-sanh" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
+					{$t('hero.compareCars')}
 				</a>
-				<a href="/tinh-gia" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
-					Tính giá lăn bánh
+				<a href="/{$locale}/tinh-gia" class="rounded-full bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:bg-white/20">
+					{$t('hero.priceCalculator')}
 				</a>
 			</div>
 		</div>

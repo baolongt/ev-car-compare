@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import RangeSlider from '$components/ui/range-slider.svelte';
 	import { formatVNDCompact } from '$utils/format';
 
@@ -11,7 +12,7 @@
 </script>
 
 <div class="space-y-2">
-	<h3 class="text-sm font-medium text-gray-900">Giá (VND)</h3>
+	<h3 class="text-sm font-medium text-gray-900">{$t('filters.priceRange')}</h3>
 	<RangeSlider
 		min={0}
 		max={5000000000}

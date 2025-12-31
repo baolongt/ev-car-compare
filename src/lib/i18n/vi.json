@@ -1,0 +1,201 @@
+{
+  "common": {
+    "brand": "Thương hiệu",
+    "price": "Giá",
+    "range": "Tầm xa",
+    "battery": "Pin",
+    "compare": "So sánh",
+    "calculate": "Tính giá",
+    "viewDetails": "Xem chi tiết",
+    "allCars": "Tất cả xe điện",
+    "search": "Tìm kiếm",
+    "searchPlaceholder": "Tìm xe theo tên, hãng...",
+    "menu": "Menu",
+    "close": "Đóng",
+    "reset": "Đặt lại",
+    "share": "Chia sẻ",
+    "copied": "Đã sao chép!",
+    "clearAll": "Xóa tất cả",
+    "select": "Chọn",
+    "remove": "Xóa",
+    "vnd": "VND",
+    "seats": "chỗ"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "cars": "Xe điện",
+    "compare": "So sánh",
+    "calculator": "Tính giá"
+  },
+  "header": {
+    "siteName": "EV So Sánh",
+    "siteNameShort": "EV"
+  },
+  "hero": {
+    "title": "So sánh {highlight}Xe Điện{/highlight} tại Việt Nam",
+    "titleHighlight": "Xe Điện",
+    "subtitle": "Tìm chiếc xe điện phù hợp với bạn. So sánh thông số kỹ thuật, giá cả và tính năng của các mẫu xe điện phổ biến nhất tại thị trường Việt Nam.",
+    "searchPlaceholder": "Tìm xe theo tên, hãng...",
+    "searchButton": "Tìm kiếm",
+    "viewAllCars": "Xem tất cả xe điện",
+    "compareCars": "So sánh xe",
+    "priceCalculator": "Tính giá lăn bánh"
+  },
+  "filters": {
+    "title": "Bộ lọc",
+    "toggleFilters": "Bộ lọc",
+    "reset": "Đặt lại",
+    "brand": "Hãng xe",
+    "priceRange": "Giá (VND)",
+    "rangeKm": "Tầm xa (km)",
+    "batteryKwh": "Dung lượng pin (kWh)"
+  },
+  "car": {
+    "specs": "Thông số kỹ thuật",
+    "features": "Tính năng",
+    "similar": "Xe tương tự",
+    "featured": "Nổi bật",
+    "addToCompare": "Thêm vào so sánh",
+    "removeFromCompare": "Xóa khỏi so sánh",
+    "maxCompareReached": "Đã đạt giới hạn 3 xe",
+    "noFeatures": "Chưa có thông tin tính năng.",
+    "imageAlt": "Ảnh {index} / {total}",
+    "prevImage": "Ảnh trước",
+    "nextImage": "Ảnh tiếp theo",
+    "thumbnailAlt": "Ảnh {index}",
+    "specs": {
+      "performance": "Hiệu suất",
+      "batteryCharging": "Pin & Sạc",
+      "dimensions": "Kích thước",
+      "power": "Công suất",
+      "torque": "Mô-men xoắn",
+      "topSpeed": "Tốc độ tối đa",
+      "acceleration": "0-100 km/h",
+      "driveType": "Hệ dẫn động",
+      "batteryCapacity": "Dung lượng pin",
+      "range": "Tầm xa",
+      "chargingDC": "Sạc nhanh DC",
+      "chargingAC": "Sạc AC",
+      "dimensionsLWH": "Kích thước (DxRxC)",
+      "wheelbase": "Chiều dài cơ sở",
+      "weight": "Trọng lượng",
+      "seats": "Số chỗ ngồi"
+    }
+  },
+  "comparison": {
+    "title": "So Sánh Xe Điện",
+    "subtitle": "Chọn từ 2 đến {max} xe để so sánh thông số kỹ thuật chi tiết.",
+    "selectCar": "Chọn xe",
+    "addCar": "Thêm xe",
+    "removeCar": "Xóa xe",
+    "noSelection": "Chưa có xe nào được chọn",
+    "noSelectionSubtitle": "Sử dụng ô tìm kiếm ở trên để thêm xe vào so sánh.",
+    "viewCarList": "Xem danh sách xe điện",
+    "highlightDifferences": "Đánh dấu khác biệt",
+    "share": "Chia sẻ",
+    "copied": "Đã sao chép!",
+    "clearAll": "Xóa tất cả",
+    "addOneMore": "Thêm ít nhất 1 xe nữa để bắt đầu so sánh thông số kỹ thuật.",
+    "searchPlaceholder": "Tìm xe..."
+  },
+  "calculator": {
+    "title": "Tính Giá Lăn Bánh",
+    "subtitle": "Tính toán chi phí thực tế khi mua xe điện tại Việt Nam, bao gồm tất cả phí và lệ phí.",
+    "selectCar": "Chọn xe điện",
+    "selectProvince": "Chọn tỉnh/thành phố",
+    "selectedCar": "Xe đã chọn",
+    "clearSelection": "Xóa xe đã chọn",
+    "searchPlaceholder": "Tìm xe theo tên, hãng...",
+    "popularCars": "Xe phổ biến",
+    "priceBreakdown": "Chi tiết giá lăn bánh",
+    "priceBreakdownEmpty": "Chọn xe để tính giá lăn bánh",
+    "priceBreakdownEmptySubtitle": "Kết quả sẽ hiển thị ở đây",
+    "basePrice": "Giá niêm yết",
+    "registrationFee": "Phí trước bạ",
+    "licensePlate": "Phí biển số",
+    "roadMaintenanceFee": "Phí bảo trì đường bộ",
+    "insurance": "Bảo hiểm trách nhiệm dân sự",
+    "inspectionFee": "Phí kiểm định",
+    "totalOnRoadPrice": "Tổng chi phí lăn bánh",
+    "totalOnRoadPriceNote": "Bao gồm giá xe và tất cả các loại phí, lệ phí",
+    "basePriceSummary": "Giá xe",
+    "feesSummary": "Phí, lệ phí",
+    "evIncentives": {
+      "title": "Lưu ý về chính sách ưu đãi xe điện",
+      "exemption100": "Xe điện được {strong}miễn 100% phí trước bạ{/strong} đến hết tháng 2/2027 theo Nghị định 10/2022/NĐ-CP.",
+      "licensePlateFee": "Phí biển số: Hà Nội và TP.HCM là 20 triệu, các tỉnh thành khác từ 1-4 triệu VND.",
+      "disclaimer": "Giá tính toán là giá tham khảo, có thể thay đổi theo chính sách của từng đại lý."
+    }
+  },
+  "footer": {
+    "about": "Nền tảng so sánh xe điện hàng đầu Việt Nam. Giúp bạn tìm chiếc xe điện phù hợp nhất.",
+    "explore": "Khám phá",
+    "allCars": "Tất cả xe điện",
+    "compareCars": "So sánh xe",
+    "priceCalculator": "Tính giá lăn bánh",
+    "brands": "Thương hiệu",
+    "copyright": "© {year} EV So Sánh. Tất cả thông tin chỉ mang tính tham khảo."
+  },
+  "home": {
+    "featuredCars": "Xe điện nổi bật",
+    "featuredCarsSubtitle": "Những mẫu xe điện được quan tâm nhất tại Việt Nam",
+    "brandsTitle": "Các thương hiệu xe điện tại Việt Nam"
+  },
+  "homepage": {
+    "stats": {
+      "totalCars": "Xe điện",
+      "brands": "Thương hiệu",
+      "comparisons": "So sánh",
+      "users": "Người dùng"
+    }
+  },
+  "stats": {
+    "models": "Mẫu xe điện",
+    "brands": "Thương hiệu",
+    "priceFrom": "Giá từ",
+    "maxRange": "Tầm xa tối đa"
+  },
+  "seo": {
+    "defaultTitle": "EV So Sánh - So sánh xe điện tại Việt Nam",
+    "homeTitle": "So sánh Xe Điện tại Việt Nam | EV So Sánh",
+    "homeDescription": "Tìm chiếc xe điện phù hợp với bạn. So sánh thông số kỹ thuật, giá cả và tính năng của các mẫu xe điện phổ biến nhất tại thị trường Việt Nam.",
+    "titleSuffix": "| EV So Sánh",
+    "description": "So sánh xe điện tại Việt Nam. Tìm chiếc xe điện phù hợp với bạn với thông tin chi tiết về giá cả, thông số kỹ thuật và tính năng."
+  },
+  "units": {
+    "km": "km",
+    "kwh": "kWh",
+    "hp": "HP",
+    "kw": "kW",
+    "nm": "Nm",
+    "kmh": "km/h",
+    "seconds": "s",
+    "mm": "mm",
+    "kg": "kg",
+    "minutes": "phút",
+    "hours": "giờ"
+  },
+  "driveTypes": {
+    "fwd": "Dẫn động cầu trước (FWD)",
+    "rwd": "Dẫn động cầu sau (RWD)",
+    "awd": "Dẫn động 4 bánh (AWD)",
+    "4wd": "Dẫn động 4 bánh (4WD)"
+  },
+  "provinces": {
+    "hanoi": "Hà Nội",
+    "hochiminh": "TP. Hồ Chí Minh",
+    "danang": "Đà Nẵng",
+    "haiphong": "Hải Phòng",
+    "cantho": "Cần Thơ",
+    "binhduong": "Bình Dương",
+    "dongnai": "Đồng Nai",
+    "vungtau": "Bà Rịa - Vũng Tàu"
+  },
+  "errors": {
+    "pageNotFound": "Không tìm thấy trang",
+    "pageNotFoundDescription": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.",
+    "backHome": "Về trang chủ",
+    "serverError": "Đã xảy ra lỗi",
+    "serverErrorDescription": "Xin lỗi, đã có lỗi xảy ra. Vui lòng thử lại sau."
+  }
+}

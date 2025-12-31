@@ -2,42 +2,42 @@
   {
     "id": "vinfast",
     "name": "VinFast",
-    "logo": "/images/brands/vinfast.svg",
+    "logo": "/images/brands/vinfast.png",
     "country": "Việt Nam",
     "website": "https://vinfastauto.com"
   },
   {
     "id": "byd",
     "name": "BYD",
-    "logo": "/images/brands/byd.svg",
+    "logo": "/images/brands/byd.png",
     "country": "Trung Quốc",
     "website": "https://byd.com"
   },
   {
     "id": "tesla",
     "name": "Tesla",
-    "logo": "/images/brands/tesla.svg",
+    "logo": "/images/brands/tesla.png",
     "country": "Hoa Kỳ",
     "website": "https://tesla.com"
   },
   {
     "id": "hyundai",
     "name": "Hyundai",
-    "logo": "/images/brands/hyundai.svg",
+    "logo": "/images/brands/hyundai.png",
     "country": "Hàn Quốc",
     "website": "https://hyundai.com"
   },
   {
     "id": "mercedes",
     "name": "Mercedes-Benz",
-    "logo": "/images/brands/mercedes.svg",
+    "logo": "/images/brands/mercedes.png",
     "country": "Đức",
     "website": "https://mercedes-benz.com"
   },
   {
     "id": "bmw",
     "name": "BMW",
-    "logo": "/images/brands/bmw.svg",
+    "logo": "/images/brands/bmw.png",
     "country": "Đức",
     "website": "https://bmw.com"
   }

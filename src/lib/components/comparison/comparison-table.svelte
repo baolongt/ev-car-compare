@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { Car } from '$types/car';
 	import { formatVND, formatRange, formatBattery, formatPower, formatNumber } from '$utils/format';
 	import { removeFromComparison } from '$stores/comparison';
@@ -14,41 +15,41 @@
 	// Generate spec rows data
 	const specSections = $derived.by(() => [
 		{
-			title: 'Giá & Thông tin chung',
+			title: $t('common.price') + ' & ' + $t('car.specs'),
 			specs: [
-				{ label: 'Giá niêm yết', values: cars.map((c) => formatVND(c.price)) },
-				{ label: 'Năm sản xuất', values: cars.map((c) => c.year) },
-				{ label: 'Bảo hành', values: cars.map((c) => c.specs.warranty) }
+				{ label: $t('calculator.basePrice'), values: cars.map((c) => formatVND(c.price)) },
+				{ label: $t('car.specs.year', { default: 'Year' }), values: cars.map((c) => c.year) },
+				{ label: $t('car.specs.warranty', { default: 'Warranty' }), values: cars.map((c) => c.specs.warranty) }
 			]
 		},
 		{
-			title: 'Hiệu suất',
+			title: $t('car.specs.performance'),
 			specs: [
-				{ label: 'Công suất', values: cars.map((c) => formatPower(c.specs.power)) },
-				{ label: 'Mô-men xoắn', values: cars.map((c) => `${formatNumber(c.specs.torque)} Nm`) },
-				{ label: '0-100 km/h', values: cars.map((c) => `${c.specs.acceleration}s`) },
-				{ label: 'Tốc độ tối đa', values: cars.map((c) => `${c.specs.topSpeed} km/h`) },
-				{ label: 'Hệ dẫn động', values: cars.map((c) => c.specs.driveType) }
+				{ label: $t('car.specs.power'), values: cars.map((c) => formatPower(c.specs.power)) },
+				{ label: $t('car.specs.torque'), values: cars.map((c) => `${formatNumber(c.specs.torque)} ${$t('units.nm')}`) },
+				{ label: $t('car.specs.acceleration'), values: cars.map((c) => `${c.specs.acceleration}${$t('units.seconds')}`) },
+				{ label: $t('car.specs.topSpeed'), values: cars.map((c) => `${c.specs.topSpeed} ${$t('units.kmh')}`) },
+				{ label: $t('car.specs.driveType'), values: cars.map((c) => c.specs.driveType) }
 			]
 		},
 		{
-			title: 'Pin & Sạc',
+			title: $t('car.specs.batteryCharging'),
 			specs: [
-				{ label: 'Dung lượng pin', values: cars.map((c) => formatBattery(c.specs.battery)) },
-				{ label: 'Tầm xa', values: cars.map((c) => formatRange(c.specs.range)) },
-				{ label: 'Sạc nhanh DC', values: cars.map((c) => c.specs.chargeTime.dc) },
-				{ label: 'Sạc AC', values: cars.map((c) => c.specs.chargeTime.ac) }
+				{ label: $t('car.specs.batteryCapacity'), values: cars.map((c) => formatBattery(c.specs.battery)) },
+				{ label: $t('car.specs.range'), values: cars.map((c) => formatRange(c.specs.range)) },
+				{ label: $t('car.specs.chargingDC'), values: cars.map((c) => c.specs.chargeTime.dc) },
+				{ label: $t('car.specs.chargingAC'), values: cars.map((c) => c.specs.chargeTime.ac) }
 			]
 		},
 		{
-			title: 'Kích thước',
+			title: $t('car.specs.dimensions'),
 			specs: [
-				{ label: 'Chiều dài', values: cars.map((c) => `${formatNumber(c.specs.dimensions.length)} mm`) },
-				{ label: 'Chiều rộng', values: cars.map((c) => `${formatNumber(c.specs.dimensions.width)} mm`) },
-				{ label: 'Chiều cao', values: cars.map((c) => `${formatNumber(c.specs.dimensions.height)} mm`) },
-				{ label: 'Chiều dài cơ sở', values: cars.map((c) => `${formatNumber(c.specs.dimensions.wheelbase)} mm`) },
-				{ label: 'Trọng lượng', values: cars.map((c) => `${formatNumber(c.specs.weight)} kg`) },
-				{ label: 'Số chỗ ngồi', values: cars.map((c) => `${c.specs.seats} chỗ`) }
+				{ label: $t('car.specs.length', { default: 'Length' }), values: cars.map((c) => `${formatNumber(c.specs.dimensions.length)} ${$t('units.mm')}`) },
+				{ label: $t('car.specs.width', { default: 'Width' }), values: cars.map((c) => `${formatNumber(c.specs.dimensions.width)} ${$t('units.mm')}`) },
+				{ label: $t('car.specs.height', { default: 'Height' }), values: cars.map((c) => `${formatNumber(c.specs.dimensions.height)} ${$t('units.mm')}`) },
+				{ label: $t('car.specs.wheelbase'), values: cars.map((c) => `${formatNumber(c.specs.dimensions.wheelbase)} ${$t('units.mm')}`) },
+				{ label: $t('car.specs.weight'), values: cars.map((c) => `${formatNumber(c.specs.weight)} ${$t('units.kg')}`) },
+				{ label: $t('car.specs.seats'), values: cars.map((c) => `${c.specs.seats} ${$t('common.seats')}`) }
 			]
 		}
 	]);
@@ -56,7 +57,7 @@
 
 {#if cars.length === 0}
 	<div class="py-12 text-center">
-		<p class="text-gray-500">Chưa có xe nào được chọn để so sánh.</p>
+		<p class="text-gray-500">{$t('comparison.noSelection')}</p>
 	</div>
 {:else}
 	<div class="overflow-x-auto">
@@ -71,7 +72,7 @@
 								<button
 									onclick={() => removeFromComparison(car.id)}
 									class="absolute -right-2 -top-2 rounded-full bg-red-100 p-1 text-red-600 transition hover:bg-red-200"
-									aria-label="Xóa khỏi so sánh"
+									aria-label={$t('comparison.removeCar')}
 								>
 									<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

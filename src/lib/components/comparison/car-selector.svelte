@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { Car } from '$types/car';
 	import { allCars } from '$stores/filters';
 	import { comparisonIds, addToComparison, MAX_COMPARE_CARS } from '$stores/comparison';
@@ -46,7 +47,7 @@
 
 <div class="relative">
 	<div class="rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 p-4">
-		<p class="mb-2 text-sm font-medium text-gray-500">Chọn xe {slot}</p>
+		<p class="mb-2 text-sm font-medium text-gray-500">{$t('comparison.selectCar')} {slot}</p>
 		<div class="relative">
 			<svg
 				class="absolute left-3 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
@@ -66,7 +67,7 @@
 				bind:value={searchQuery}
 				onfocus={handleFocus}
 				onblur={handleBlur}
-				placeholder="Tìm xe theo tên..."
+				placeholder={$t('comparison.searchPlaceholder')}
 				class="w-full rounded-lg border border-gray-300 py-2 pl-10 pr-4 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500"
 			/>
 		</div>
@@ -91,7 +92,7 @@
 							<p class="text-sm text-gray-500">{formatVNDCompact(car.price)}</p>
 						</div>
 						{#if isSelected}
-							<span class="text-xs text-primary-600">Đã chọn</span>
+							<span class="text-xs text-primary-600">{$t('common.select')}ed</span>
 						{/if}
 					</button>
 				{/each}

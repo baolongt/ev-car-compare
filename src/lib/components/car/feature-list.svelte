@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
+
 	interface Props {
 		features: string[];
 		columns?: 2 | 3 | 4;
@@ -29,5 +31,5 @@
 		{/each}
 	</ul>
 {:else}
-	<p class="text-gray-500">Chưa có thông tin tính năng.</p>
+	<p class="text-gray-500">{$t('car.noFeatures')}</p>
 {/if}

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t, locale } from 'svelte-i18n';
 	import type { Car } from '$types/car';
 	import CarCard from '$components/car/car-card.svelte';
 	import { getFeaturedCars } from '$stores/filters';
@@ -16,11 +17,11 @@
 	<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="flex items-end justify-between">
 			<div>
-				<h2 class="text-3xl font-bold text-gray-900">Xe điện nổi bật</h2>
-				<p class="mt-2 text-gray-600">Những mẫu xe điện được quan tâm nhất tại Việt Nam</p>
+				<h2 class="text-3xl font-bold text-gray-900">{$t('home.featuredCars')}</h2>
+				<p class="mt-2 text-gray-600">{$t('home.featuredCarsSubtitle')}</p>
 			</div>
-			<a href="/xe-dien" class="hidden text-primary-600 hover:text-primary-700 sm:block">
-				Xem tất cả &rarr;
+			<a href="/{$locale}/xe-dien" class="hidden text-primary-600 hover:text-primary-700 sm:block">
+				{$t('common.allCars')} &rarr;
 			</a>
 		</div>
 
@@ -31,7 +32,7 @@
 		</div>
 
 		<div class="mt-8 text-center sm:hidden">
-			<a href="/xe-dien" class="btn-primary">Xem tất cả xe điện</a>
+			<a href="/{$locale}/xe-dien" class="btn-primary">{$t('common.allCars')}</a>
 		</div>
 	</div>
 </section>

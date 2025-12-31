@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from 'svelte-i18n';
 	import type { PriceBreakdown } from '$utils/calculator';
 	import { getFeeItems, getSavingsMessage } from '$utils/calculator';
 	import { formatVND } from '$utils/format';
@@ -40,22 +41,22 @@
 	<!-- Total -->
 	<div class="border-t-2 border-gray-200 pt-4">
 		<div class="flex items-center justify-between">
-			<p class="text-lg font-semibold text-gray-900">Tổng chi phí lăn bánh</p>
+			<p class="text-lg font-semibold text-gray-900">{$t('calculator.totalOnRoadPrice')}</p>
 			<p class="text-2xl font-bold text-primary-600">{formatVND(breakdown.totalOnRoadPrice)}</p>
 		</div>
 		<p class="mt-1 text-sm text-gray-500">
-			Bao gồm giá xe và tất cả các loại phí, lệ phí
+			{$t('calculator.totalOnRoadPriceNote')}
 		</p>
 	</div>
 
 	<!-- Summary Cards -->
 	<div class="grid grid-cols-2 gap-4">
 		<div class="rounded-lg bg-gray-50 p-4 text-center">
-			<p class="text-sm text-gray-500">Giá xe</p>
+			<p class="text-sm text-gray-500">{$t('calculator.basePriceSummary')}</p>
 			<p class="text-lg font-bold text-gray-900">{formatVND(breakdown.basePrice)}</p>
 		</div>
 		<div class="rounded-lg bg-gray-50 p-4 text-center">
-			<p class="text-sm text-gray-500">Phí, lệ phí</p>
+			<p class="text-sm text-gray-500">{$t('calculator.feesSummary')}</p>
 			<p class="text-lg font-bold text-gray-900">{formatVND(breakdown.totalFixedFees)}</p>
 		</div>
 	</div>
