@@ -17,7 +17,7 @@
       "maxLoad": 160,
       "warranty": "3 năm pin"
     },
-    "images": ["/images/placeholder-motorbike.svg"],
+    "images": ["/images/motorbikes/vinfast-klara-s.png"],
     "features": ["Màn hình LCD", "Khóa thông minh", "Phanh đĩa trước sau", "Đèn LED"],
     "description": "Xe máy điện VinFast phổ biến nhất với thiết kế thanh lịch và pin khỏe.",
     "featured": true
@@ -40,7 +40,7 @@
       "maxLoad": 150,
       "warranty": "2 năm pin"
     },
-    "images": ["/images/placeholder-motorbike.svg"],
+    "images": ["/images/motorbikes/vinfast-evo-200.png"],
     "features": ["Phanh đĩa", "Đèn LED", "Cốp rộng"],
     "description": "Xe điện giá rẻ phù hợp học sinh sinh viên, di chuyển nội thành.",
     "featured": true
@@ -63,7 +63,7 @@
       "maxLoad": 150,
       "warranty": "3 năm pin"
     },
-    "images": ["/images/placeholder-motorbike.svg"],
+    "images": ["/images/motorbikes/yadea-g5.png"],
     "features": ["Chống trộm thông minh", "Đèn LED", "Phanh đĩa", "Màn hình điện tử"],
     "description": "Xe máy điện cao cấp từ YADEA với công nghệ Graphene.",
     "featured": true
@@ -86,7 +86,7 @@
       "maxLoad": 130,
       "warranty": "2 năm pin"
     },
-    "images": ["/images/placeholder-motorbike.svg"],
+    "images": ["/images/motorbikes/pega-esmart.png"],
     "features": ["Thiết kế nhỏ gọn", "Đèn LED", "Cốp xe"],
     "description": "Xe điện mini giá rẻ, phù hợp di chuyển ngắn trong phố.",
     "featured": false
@@ -109,7 +109,7 @@
       "maxLoad": 180,
       "warranty": "5 năm pin"
     },
-    "images": ["/images/placeholder-motorbike.svg"],
+    "images": ["/images/motorbikes/dat-bike-weaver.png"],
     "features": ["Động cơ 6.5kW", "Sạc nhanh 3 giờ", "Màn hình TFT", "Kết nối Bluetooth"],
     "description": "Xe máy điện cao cấp Việt Nam với tầm xa vượt trội và hiệu năng mạnh.",
     "featured": true
@@ -132,7 +132,7 @@
       "maxLoad": 150,
       "warranty": "2 năm pin"
     },
-    "images": ["/images/placeholder-motorbike.svg"],
+    "images": ["/images/motorbikes/yadea-xmen.png"],
     "features": ["Thiết kế thể thao", "Đèn LED", "Phanh đĩa"],
     "description": "Xe điện năng động với thiết kế thể thao, phù hợp giới trẻ.",
     "featured": false
