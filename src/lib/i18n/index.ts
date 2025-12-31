@@ -1,10 +1,15 @@
 import { browser } from '$app/environment';
-import { init, register, locale, waitLocale } from 'svelte-i18n';
+import { init, register, locale, waitLocale, getLocaleFromNavigator } from 'svelte-i18n';
+
+// Import translations directly for SSR
+import viTranslations from './vi.json';
+import enTranslations from './en.json';
 
 const defaultLocale = 'vi';
 
-register('vi', () => import('./vi.json'));
-register('en', () => import('./en.json'));
+// Register with both sync (for SSR) and async (for code splitting)
+register('vi', () => Promise.resolve(viTranslations));
+register('en', () => Promise.resolve(enTranslations));
 
 // Get locale from URL path on browser, default to 'vi'
 function getInitialLocale(): string {
