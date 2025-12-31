@@ -1,0 +1,44 @@
+[
+  {
+    "id": "vinfast",
+    "name": "VinFast",
+    "logo": "/images/brands/vinfast.svg",
+    "country": "Việt Nam",
+    "website": "https://vinfastauto.com"
+  },
+  {
+    "id": "byd",
+    "name": "BYD",
+    "logo": "/images/brands/byd.svg",
+    "country": "Trung Quốc",
+    "website": "https://byd.com"
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "logo": "/images/brands/tesla.svg",
+    "country": "Hoa Kỳ",
+    "website": "https://tesla.com"
+  },
+  {
+    "id": "hyundai",
+    "name": "Hyundai",
+    "logo": "/images/brands/hyundai.svg",
+    "country": "Hàn Quốc",
+    "website": "https://hyundai.com"
+  },
+  {
+    "id": "mercedes",
+    "name": "Mercedes-Benz",
+    "logo": "/images/brands/mercedes.svg",
+    "country": "Đức",
+    "website": "https://mercedes-benz.com"
+  },
+  {
+    "id": "bmw",
+    "name": "BMW",
+    "logo": "/images/brands/bmw.svg",
+    "country": "Đức",
+    "website": "https://bmw.com"
+  }
+]

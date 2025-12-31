@@ -1,4 +1,4 @@
-import { _ as head } from "../../chunks/index2.js";
+import { h as head } from "../../chunks/index2.js";
 import { p as pageTitle } from "../../chunks/seo.js";
 import { e as escape_html } from "../../chunks/context.js";
 function _page($$renderer, $$props) {

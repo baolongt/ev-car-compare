@@ -27,18 +27,19 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/so-sanh" | "/tinh-gia" | "/xe-dien";
+		RouteId(): "/" | "/so-sanh" | "/tinh-gia" | "/xe-dien" | "/xe-dien/[slug]";
 		RouteParams(): {
-			
+			"/xe-dien/[slug]": { slug: string }
 		};
 		LayoutParams(): {
-			"/": Record<string, never>;
+			"/": { slug?: string };
 			"/so-sanh": Record<string, never>;
 			"/tinh-gia": Record<string, never>;
-			"/xe-dien": Record<string, never>
+			"/xe-dien": { slug?: string };
+			"/xe-dien/[slug]": { slug: string }
 		};
-		Pathname(): "/" | "/so-sanh" | "/so-sanh/" | "/tinh-gia" | "/tinh-gia/" | "/xe-dien" | "/xe-dien/";
+		Pathname(): "/" | "/so-sanh" | "/so-sanh/" | "/tinh-gia" | "/tinh-gia/" | "/xe-dien" | "/xe-dien/" | `/xe-dien/${string}` & {} | `/xe-dien/${string}/` & {};
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/favicon.png" | string & {};
+		Asset(): "/favicon.png" | "/images/placeholder-car.svg" | string & {};
 	}
 }

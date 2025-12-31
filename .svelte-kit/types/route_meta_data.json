@@ -10,6 +10,11 @@
 		"src/routes/+layout.ts"
 	],
 	"/xe-dien": [
+		"src/routes/xe-dien/+page.ts",
+		"src/routes/+layout.ts"
+	],
+	"/xe-dien/[slug]": [
+		"src/routes/xe-dien/[slug]/+page.ts",
 		"src/routes/+layout.ts"
 	]
 }

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" fill="none">
+  <rect width="400" height="225" fill="#f3f4f6"/>
+  <path d="M120 140h160v30a10 10 0 01-10 10H130a10 10 0 01-10-10v-30z" fill="#d1d5db"/>
+  <path d="M140 140V100a10 10 0 0110-10h100a10 10 0 0110 10v40H140z" fill="#e5e7eb"/>
+  <circle cx="155" cy="165" r="15" fill="#9ca3af"/>
+  <circle cx="245" cy="165" r="15" fill="#9ca3af"/>
+  <rect x="150" y="105" width="40" height="25" rx="3" fill="#d1d5db"/>
+  <rect x="210" y="105" width="40" height="25" rx="3" fill="#d1d5db"/>
+  <text x="200" y="200" text-anchor="middle" fill="#9ca3af" font-family="system-ui" font-size="14">EV Image</text>
+</svg>

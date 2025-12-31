@@ -18,6 +18,16 @@ const config = {
 			$types: 'src/lib/types',
 			$utils: 'src/lib/utils',
 			$data: 'src/lib/data'
+		},
+		prerender: {
+			handleHttpError: ({ path, message }) => {
+				// Ignore missing images during prerender
+				if (path.startsWith('/images/')) {
+					console.warn(`Missing image: ${path}`);
+					return;
+				}
+				throw new Error(message);
+			}
 		}
 	}
 };
