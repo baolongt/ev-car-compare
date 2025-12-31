@@ -1,9 +1,23 @@
 <script lang="ts">
 	import { pageTitle } from '$utils/seo';
-	import { formatVND, formatRange, formatBattery, formatPower, formatNumber } from '$utils/format';
+	import { formatVND } from '$utils/format';
+	import { generateCarSchema, generateBreadcrumbSchema } from '$utils/structured-data';
+	import ImageGallery from '$components/car/image-gallery.svelte';
+	import SpecTable from '$components/car/spec-table.svelte';
+	import FeatureList from '$components/car/feature-list.svelte';
+	import SimilarCars from '$components/car/similar-cars.svelte';
 
 	let { data } = $props();
 	let car = $derived(data.car);
+
+	const carSchema = $derived(generateCarSchema(car));
+	const breadcrumbSchema = $derived(
+		generateBreadcrumbSchema([
+			{ name: 'Trang chủ', url: '/' },
+			{ name: 'Xe điện', url: '/xe-dien' },
+			{ name: `${car.brand} ${car.model}` }
+		])
+	);
 </script>
 
 <svelte:head>
@@ -11,11 +25,16 @@
 	<meta name="description" content={car.description} />
 	<meta property="og:title" content={`${car.brand} ${car.model} - So Sánh Xe Điện Việt Nam`} />
 	<meta property="og:description" content={car.description} />
+	{#if car.images[0]}
+		<meta property="og:image" content={car.images[0]} />
+	{/if}
+	{@html `<script type="application/ld+json">${JSON.stringify(carSchema)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>`}
 </svelte:head>
 
 <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
 	<!-- Breadcrumb -->
-	<nav class="mb-6 text-sm">
+	<nav class="mb-6 text-sm" aria-label="Breadcrumb">
 		<ol class="flex items-center gap-2">
 			<li><a href="/" class="text-gray-500 hover:text-gray-700">Trang chủ</a></li>
 			<li class="text-gray-400">/</li>
@@ -26,15 +45,9 @@
 	</nav>
 
 	<div class="lg:grid lg:grid-cols-2 lg:gap-12">
-		<!-- Image -->
+		<!-- Image Gallery -->
 		<div class="mb-8 lg:mb-0">
-			<div class="aspect-video overflow-hidden rounded-xl bg-gray-100">
-				<img
-					src={car.images[0] || '/images/placeholder-car.svg'}
-					alt={`${car.brand} ${car.model}`}
-					class="h-full w-full object-cover"
-				/>
-			</div>
+			<ImageGallery images={car.images} alt={`${car.brand} ${car.model}`} />
 		</div>
 
 		<!-- Details -->
@@ -49,15 +62,15 @@
 
 			<p class="mt-6 text-gray-600">{car.description}</p>
 
-			<!-- Key Specs -->
+			<!-- Key Specs Quick View -->
 			<div class="mt-8 grid grid-cols-3 gap-4">
 				<div class="rounded-lg bg-gray-50 p-4 text-center">
-					<p class="text-2xl font-bold text-gray-900">{formatRange(car.specs.range)}</p>
-					<p class="text-sm text-gray-500">Tầm xa</p>
+					<p class="text-2xl font-bold text-gray-900">{car.specs.range}</p>
+					<p class="text-sm text-gray-500">km tầm xa</p>
 				</div>
 				<div class="rounded-lg bg-gray-50 p-4 text-center">
-					<p class="text-2xl font-bold text-gray-900">{formatBattery(car.specs.battery)}</p>
-					<p class="text-sm text-gray-500">Dung lượng pin</p>
+					<p class="text-2xl font-bold text-gray-900">{car.specs.battery}</p>
+					<p class="text-sm text-gray-500">kWh pin</p>
 				</div>
 				<div class="rounded-lg bg-gray-50 p-4 text-center">
 					<p class="text-2xl font-bold text-gray-900">{car.specs.acceleration}s</p>
@@ -76,90 +89,21 @@
 	<!-- Specifications Table -->
 	<div class="mt-12">
 		<h2 class="text-2xl font-bold text-gray-900">Thông số kỹ thuật</h2>
+		<div class="mt-6">
+			<SpecTable specs={car.specs} />
+		</div>
 
-		<div class="mt-6 grid gap-8 md:grid-cols-2">
-			<!-- Performance -->
-			<div class="card">
-				<h3 class="mb-4 text-lg font-semibold text-gray-900">Hiệu suất</h3>
-				<dl class="space-y-3">
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Công suất</dt>
-						<dd class="font-medium">{formatPower(car.specs.power)}</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Mô-men xoắn</dt>
-						<dd class="font-medium">{formatNumber(car.specs.torque)} Nm</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Tốc độ tối đa</dt>
-						<dd class="font-medium">{car.specs.topSpeed} km/h</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Hệ dẫn động</dt>
-						<dd class="font-medium">{car.specs.driveType}</dd>
-					</div>
-				</dl>
-			</div>
-
-			<!-- Battery & Charging -->
-			<div class="card">
-				<h3 class="mb-4 text-lg font-semibold text-gray-900">Pin & Sạc</h3>
-				<dl class="space-y-3">
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Dung lượng pin</dt>
-						<dd class="font-medium">{formatBattery(car.specs.battery)}</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Tầm xa</dt>
-						<dd class="font-medium">{formatRange(car.specs.range)}</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Sạc nhanh DC</dt>
-						<dd class="font-medium">{car.specs.chargeTime.dc}</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Sạc AC</dt>
-						<dd class="font-medium">{car.specs.chargeTime.ac}</dd>
-					</div>
-				</dl>
-			</div>
-
-			<!-- Dimensions -->
-			<div class="card">
-				<h3 class="mb-4 text-lg font-semibold text-gray-900">Kích thước</h3>
-				<dl class="space-y-3">
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Dài x Rộng x Cao</dt>
-						<dd class="font-medium">{formatNumber(car.specs.dimensions.length)} x {formatNumber(car.specs.dimensions.width)} x {formatNumber(car.specs.dimensions.height)} mm</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Chiều dài cơ sở</dt>
-						<dd class="font-medium">{formatNumber(car.specs.dimensions.wheelbase)} mm</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Trọng lượng</dt>
-						<dd class="font-medium">{formatNumber(car.specs.weight)} kg</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Số chỗ ngồi</dt>
-						<dd class="font-medium">{car.specs.seats} chỗ</dd>
-					</div>
-				</dl>
-			</div>
-
-			<!-- Warranty -->
-			<div class="card">
-				<h3 class="mb-4 text-lg font-semibold text-gray-900">Bảo hành</h3>
-				<dl class="space-y-3">
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Bảo hành pin</dt>
-						<dd class="font-medium">{car.specs.warranty}</dd>
-					</div>
-					<div class="flex justify-between">
-						<dt class="text-gray-600">Năm sản xuất</dt>
-						<dd class="font-medium">{car.year}</dd>
-					</div>
-				</dl>
+		<!-- Warranty Info -->
+		<div class="mt-6 rounded-lg border border-gray-200 p-4">
+			<div class="flex items-center justify-between">
+				<div>
+					<h4 class="font-semibold text-gray-900">Bảo hành</h4>
+					<p class="text-gray-600">{car.specs.warranty}</p>
+				</div>
+				<div class="text-right">
+					<h4 class="font-semibold text-gray-900">Năm sản xuất</h4>
+					<p class="text-gray-600">{car.year}</p>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -168,16 +112,14 @@
 	{#if car.features.length > 0}
 		<div class="mt-12">
 			<h2 class="text-2xl font-bold text-gray-900">Tính năng nổi bật</h2>
-			<ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-				{#each car.features as feature}
-					<li class="flex items-center gap-2 rounded-lg bg-gray-50 px-4 py-3">
-						<svg class="h-5 w-5 text-accent-500" fill="currentColor" viewBox="0 0 20 20">
-							<path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-						</svg>
-						<span class="text-gray-700">{feature}</span>
-					</li>
-				{/each}
-			</ul>
+			<div class="mt-6">
+				<FeatureList features={car.features} columns={4} />
+			</div>
 		</div>
 	{/if}
+
+	<!-- Similar Cars -->
+	<div class="mt-12">
+		<SimilarCars currentCar={car} />
+	</div>
 </div>
