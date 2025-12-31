@@ -1,12 +1,23 @@
 <script lang="ts">
 	import type { Car } from '$types/car';
 	import { formatVNDCompact, formatRange, formatBattery } from '$utils/format';
+	import { comparisonIds, toggleComparison, MAX_COMPARE_CARS } from '$stores/comparison';
 
 	interface Props {
 		car: Car;
+		showCompareButton?: boolean;
 	}
 
-	let { car }: Props = $props();
+	let { car, showCompareButton = true }: Props = $props();
+
+	const isInComparison = $derived($comparisonIds.includes(car.id));
+	const canAddMore = $derived($comparisonIds.length < MAX_COMPARE_CARS);
+
+	function handleCompareClick(e: MouseEvent) {
+		e.preventDefault();
+		e.stopPropagation();
+		toggleComparison(car.id);
+	}
 </script>
 
 <a href="/xe-dien/{car.slug}" class="group block">
@@ -22,6 +33,25 @@
 				<span class="absolute left-2 top-2 rounded bg-accent-500 px-2 py-0.5 text-xs font-medium text-white">
 					Nổi bật
 				</span>
+			{/if}
+			{#if showCompareButton}
+				<button
+					onclick={handleCompareClick}
+					disabled={!isInComparison && !canAddMore}
+					class="absolute right-2 top-2 rounded-lg p-2 transition {isInComparison
+						? 'bg-primary-500 text-white'
+						: 'bg-white/90 text-gray-600 hover:bg-white hover:text-primary-600'} disabled:cursor-not-allowed disabled:opacity-50"
+					aria-label={isInComparison ? 'Xóa khỏi so sánh' : 'Thêm vào so sánh'}
+					title={isInComparison ? 'Xóa khỏi so sánh' : canAddMore ? 'Thêm vào so sánh' : 'Đã đạt giới hạn 3 xe'}
+				>
+					<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						{#if isInComparison}
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						{:else}
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+						{/if}
+					</svg>
+				</button>
 			{/if}
 		</div>
 

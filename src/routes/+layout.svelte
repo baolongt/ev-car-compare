@@ -2,6 +2,7 @@
 	import '../app.css';
 	import Header from '$components/layout/header.svelte';
 	import Footer from '$components/layout/footer.svelte';
+	import ComparisonBar from '$components/comparison/comparison-bar.svelte';
 
 	interface Props {
 		children: import('svelte').Snippet;
@@ -22,4 +23,5 @@
 		{@render children()}
 	</main>
 	<Footer />
+	<ComparisonBar />
 </div>
