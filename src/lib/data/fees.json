@@ -1,0 +1,30 @@
+{
+  "provinces": [
+    { "id": "hanoi", "name": "Hà Nội", "registrationRate": 0.12, "licensePlateFee": 20000000 },
+    { "id": "hcm", "name": "TP. Hồ Chí Minh", "registrationRate": 0.10, "licensePlateFee": 20000000 },
+    { "id": "danang", "name": "Đà Nẵng", "registrationRate": 0.10, "licensePlateFee": 4000000 },
+    { "id": "haiphong", "name": "Hải Phòng", "registrationRate": 0.10, "licensePlateFee": 4000000 },
+    { "id": "cantho", "name": "Cần Thơ", "registrationRate": 0.10, "licensePlateFee": 4000000 },
+    { "id": "binhduong", "name": "Bình Dương", "registrationRate": 0.10, "licensePlateFee": 4000000 },
+    { "id": "dongnai", "name": "Đồng Nai", "registrationRate": 0.10, "licensePlateFee": 4000000 },
+    { "id": "quangninh", "name": "Quảng Ninh", "registrationRate": 0.10, "licensePlateFee": 4000000 },
+    { "id": "thanhhoa", "name": "Thanh Hóa", "registrationRate": 0.10, "licensePlateFee": 1000000 },
+    { "id": "nghean", "name": "Nghệ An", "registrationRate": 0.10, "licensePlateFee": 1000000 },
+    { "id": "other", "name": "Tỉnh khác", "registrationRate": 0.10, "licensePlateFee": 1000000 }
+  ],
+  "fixedFees": {
+    "roadMaintenance": 1560000,
+    "vehicleInspection": 340000,
+    "civilLiabilityInsurance": 480700,
+    "registrationCertificate": 150000,
+    "tempLicensePlate": 150000
+  },
+  "evIncentives": {
+    "registrationFeeExemption": true,
+    "registrationFeeExemptionEndDate": "2027-03-01",
+    "luxuryTaxExemption": true,
+    "importTaxReduction": 0.0,
+    "note": "Xe điện được miễn phí trước bạ đến hết tháng 2/2027 theo Nghị định 10/2022/NĐ-CP"
+  },
+  "lastUpdated": "2024-12-31"
+}
