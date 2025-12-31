@@ -2,29 +2,11 @@
   "kits": {
     "engineer": {
       "version": "v2.1.0",
-      "installedAt": "2025-12-31T11:36:01.122Z",
+      "installedAt": "2025-12-31T15:44:16.820Z",
       "files": [
-        {
-          "path": ".ck.json",
-          "checksum": "e32447069f98ea896b04bce9f0e671444678eb28544e40895356bca084b62227",
-          "ownership": "user",
-          "installedVersion": "v2.1.0"
-        },
-        {
-          "path": ".ckignore",
-          "checksum": "e3d8e3d4b2e3e1d8f291938b17c223b6904e82b70e42c9a2f2bedcf62b26cfdf",
-          "ownership": "user",
-          "installedVersion": "v2.1.0"
-        },
         {
           "path": ".env.example",
           "checksum": "9a142a3f8a84b67798c4e042ae2188439460cfbfb127e4aae35878f844459743",
-          "ownership": "user",
-          "installedVersion": "v2.1.0"
-        },
-        {
-          "path": ".gitignore",
-          "checksum": "c76731d53b517cc2a60743a9f45d15a53f3e90184017c98868ef91c6f3f61abe",
           "ownership": "user",
           "installedVersion": "v2.1.0"
         },
@@ -1285,12 +1267,6 @@
         {
           "path": "skills/chrome-devtools/scripts/__tests__/selector.test.js",
           "checksum": "69fa6c4d04f2c8d0578325894fc06ea820e4c771d267d90969f09343e076d5e2",
-          "ownership": "user",
-          "installedVersion": "v2.1.0"
-        },
-        {
-          "path": "skills/chrome-devtools/scripts/.gitignore",
-          "checksum": "4135c9bc6d5275ea5d2b998ae111ab875956332218bf8053b479a80c569412a5",
           "ownership": "user",
           "installedVersion": "v2.1.0"
         },
@@ -3107,12 +3083,6 @@
           "installedVersion": "v2.1.0"
         },
         {
-          "path": "skills/mcp-management/scripts/.gitignore",
-          "checksum": "1dc41f5f75efaa8248b4c04cae81f5d7e171935f935b280cbc766a62f0cfed91",
-          "ownership": "user",
-          "installedVersion": "v2.1.0"
-        },
-        {
           "path": "skills/mcp-management/scripts/cli.ts",
           "checksum": "598056daca6a872a5277569ddfc39065e8df6031cedb2bf5ed35800867be2c8f",
           "ownership": "user",
@@ -3709,12 +3679,6 @@
         {
           "path": "skills/sequential-thinking/.env.example",
           "checksum": "69cc3a94aa1459e5ea14044e9a6905fd75beacae9665253a4b0c0bd67b92a43d",
-          "ownership": "user",
-          "installedVersion": "v2.1.0"
-        },
-        {
-          "path": "skills/sequential-thinking/.gitignore",
-          "checksum": "dfb359d3c052adc6f35924dbc58aa578329ff77b8c13f365c92cb80f418f4257",
           "ownership": "user",
           "installedVersion": "v2.1.0"
         },
@@ -4858,7 +4822,7 @@
   "scope": "local",
   "name": "ClaudeKit Engineer",
   "version": "v2.1.0",
-  "installedAt": "2025-12-31T11:36:01.122Z",
+  "installedAt": "2025-12-31T15:44:16.820Z",
   "userConfigFiles": [
     ".gitignore",
     ".repomixignore",

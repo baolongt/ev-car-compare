@@ -3,3 +3,4 @@ Collecting pyyaml>=6.0
 Using cached pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
 Installing collected packages: pyyaml
 Successfully installed pyyaml-6.0.3
+Requirement already satisfied: pyyaml>=6.0 in ./.venv/lib/python3.12/site-packages (6.0.3)
