@@ -9,21 +9,21 @@
   {
     "id": "yadea",
     "name": "YADEA",
-    "logo": "/images/brands/yadea.svg",
+    "logo": "/images/brands/yadea.png",
     "country": "Trung Quốc",
     "website": "https://yadea.com"
   },
   {
     "id": "pega",
     "name": "PEGA",
-    "logo": "/images/brands/pega.svg",
+    "logo": "/images/brands/pega.png",
     "country": "Việt Nam",
     "website": "https://pega.vn"
   },
   {
     "id": "datbike",
     "name": "Dat Bike",
-    "logo": "/images/brands/datbike.svg",
+    "logo": "/images/brands/datbike.png",
     "country": "Việt Nam",
     "website": "https://datbike.com"
   }
