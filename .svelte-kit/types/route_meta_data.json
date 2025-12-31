@@ -1,0 +1,15 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/so-sanh": [
+		"src/routes/+layout.ts"
+	],
+	"/tinh-gia": [
+		"src/routes/+layout.ts"
+	],
+	"/xe-dien": [
+		"src/routes/+layout.ts"
+	]
+}
